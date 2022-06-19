@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+<style>
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #29384d;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background-color: #465262;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+.row {
+    text-align: center;
+    margin-top: -100px;
+}
+
+.login-box img {
+    width: 120px;
+    height: 120px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #0e153a;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background-color: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #29384d;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box  input:valid ~label {
+    top: -20px;
+    left: 0;
+    color: #e3f9f6;
+    font-size: 12px;
+}
+
+span {
+    position: relative;
+    display: inline-flex;
+    width: 120px;
+    height: 45px;
+}
+
+span a {
+    font-size: 12px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+}
+
+span a:before,
+span a:after {
+    height: 45px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+span a:before {
+    position: absolute;
+    content: "BUTTON";
+    color: #fff3d3;
+    background: #29384d;
+    transform: rotateY(0) translateZ(25px);
+}
+
+span a:after {
+    position: absolute;
+    content: "SUBMIT";
+    font-weight: bold;
+    color: #fff3d3;
+    transform: rotateX(90deg) translateZ(25px);
+    background: #0e153a;
+    border: 2px solid white;
+}
+
+span a:hover {
+    transform: translateZ(-25px) rotateX(-90deg);
+}
+</style>
+<body>
+    <div class="login-box">
+        <div class="row">
+            <img src="https://raw.githubusercontent.com/obliviate-dan/Login-Form/master/img/avatar.png" alt="">
+        </div>
+        <h2>Login</h2>
+        <form action="">
+            <div class="user-box">
+                <input type="text" name="" required>
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required>
+                <label>password</label>
+            </div>
+            <span id="myButton" class="myclass"><a href="#"></a></span>
+        </form>
+    </div>
+</body>
+</html>
